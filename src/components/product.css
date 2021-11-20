@@ -1,0 +1,19 @@
+.hintProudct {
+
+    font-size: 14px;
+    padding: 10px;
+    background-color: #F3F4F6;
+    border-radius: 20px;
+    color: rgba(0, 0, 0, .8);
+    margin: 50px 0 20px 0;
+}
+.select{
+    width: 60%;
+    height: 25px;
+    border: none;
+    border-radius:30px;
+    outline: none;
+    background-color: #F3F4F6;
+    margin-bottom: 30px;
+}
+

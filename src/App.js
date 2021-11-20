@@ -11,14 +11,16 @@ const App = () => {
 
   const submitHanlder = (event) => {
     event.preventDefault();
+    const newList = [...list];
     const newItem = { name: inputValue, id: list.length };
-    const updated = [...list, newItem];
+    const updated = [...newList, newItem];
     setList(updated);
     setInputValue(" ");
   };
 
   return (
     <Group
+      list={list}
       change={changeHandler}
       inputValue={inputValue}
       submit={submitHanlder}
