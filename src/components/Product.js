@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./product.css";
 
+
 const Product = ({ list }) => {
   const [selected, setselected] = useState([]);
   const [productInputValue, setProductInputValue] = useState([]);
   const [productList, setProductList] = useState([]);
+  const productCategory = productList.map((item) => {
+    return item.category;
+  });
   const clickHandler = (e) => {
     setselected(e.target.value);
   };
@@ -22,9 +26,11 @@ const Product = ({ list }) => {
       category: selected,
     };
     const updated = [...list, newItem];
-    setProductList(updated)
-    setProductInputValue(" ")
+    setProductList(updated);
+    setProductInputValue(" ");
   };
+
+  console.log(productCategory.toString());
 
   return (
     <>
@@ -42,7 +48,7 @@ const Product = ({ list }) => {
       <div className="formContainer">
         <form>
           <input
-          value={productInputValue}
+            value={productInputValue}
             className="input"
             type="text"
             onChange={(e) => changeHandler(e)}
@@ -55,6 +61,9 @@ const Product = ({ list }) => {
           ></input>
         </form>
       </div>
+      {productCategory.toString() ===selected && productList.map((item , id)=>{
+        return <li key ={item.id}>{item.name}</li>
+      })}
     </>
   );
 };
