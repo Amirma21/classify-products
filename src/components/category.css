@@ -1,0 +1,35 @@
+p.hint {
+    font-size: 14px;
+    padding: 10px;
+    background-color: #F3F4F6;
+    border-radius: 20px;
+    color: rgba(0, 0, 0, .8);
+    margin: 10px 0;
+}
+
+.btn {
+    width: 30px;
+    background-color: #A7F3D0;
+    border: none;
+    border-radius: 0 30px 30px 0; 
+    height: 20px;
+}
+
+.formContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input{
+    border: none;
+    border-radius:30px 0 0 30px;
+    outline: none;
+    background-color: #F3F4F6;
+    height: 20px;
+}
+
+.input:focus{
+    padding-left: 5px;
+}
+
